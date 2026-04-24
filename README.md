@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# KIET_FSD_DebugChallenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bug Sheet — ShopEasy Debugging Assignment
+Instructions: Find and fix all 9 bugs spread across 4 files. The app compiles and runs without errors — all bugs are logical/behavioral.
 
-## Available Scripts
+Bug 1 — App.js | Easy
+Symptom: Price range filters exclude products at the exact boundary price (e.g. "Under ₹500" won't show the ₹499 product; "₹500–₹1,000" won't show the ₹500 or ₹1,000 products).
 
-In the project directory, you can run:
 
-### `npm start`
+Bug 2 — App.js | Hard
+Symptom: Clicking any Category button (Electronics, Footwear, etc.) has no effect — the product grid never changes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Bug 3 — App.js | Easy
+Symptom: Clicking the 🗑️ delete button in the cart removes all other items and keeps only the one you tried to delete.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Bug 4 — App.js | Medium
+Symptom: The cart badge on the header button always shows nothing (or 0) even after adding multiple items.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bug 5 — App.js | Hard
+Symptom: The "+ Add to Cart" button never turns green and never says "✓ Added", even after a product is in the cart.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Bug 6 — Cart.jsx | Medium
+Symptom: The cart total always shows ₹0, no matter how many items or quantities are added.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Bug 7 — Cart.jsx | Medium
+Symptom: The − (decrease) button in the cart is never disabled, allowing quantity to drop to 0 (and below), breaking the total.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bug 8 — Filters.jsx | Easy
+Symptom: The sort order is inverted — selecting "Price: Low to High" sorts highest-priced items first, and vice versa.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bug 9 — ProductCard.jsx | Easy
+Symptom: A product rated 4.5 shows only 4 filled stars instead of 5. All half-star ratings are rounded down.
